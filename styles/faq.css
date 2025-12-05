@@ -48,7 +48,7 @@ html {
   /* Use the desired font size */
   margin-top: 150px;
   text-align: center;
-  font-weight: 600;
+  font-weight: 700;
   /* background-image: url("../assets/Images/timeline.svg") !important; */
   background: linear-gradient(120deg, #00e5ff, #4dabf7, #00b4d8, #0077b6, #00ffff, #4dabf7, #00e5ff, #00b4d8);
   background-clip: text;
@@ -56,7 +56,8 @@ html {
   -webkit-text-fill-color: transparent;
   background-repeat: no-repeat;
   background-size: cover;
-  filter: drop-shadow(0 0 10px rgba(0, 229, 255, 0.3));
+  filter: drop-shadow(0 0 15px rgba(0, 229, 255, 0.5))
+          drop-shadow(0 0 30px rgba(0, 229, 255, 0.3));
 }
 
 

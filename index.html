@@ -34,7 +34,7 @@
                 <a href="#home"><span class="bold">Home</span> </a>
                 <!-- <a href="./src/project.html">Projects</a> -->
                 <a href="src/project.html">Projects</a>
-                <a href="#time_line" onclick="jumpToDiv('time_line')">Timeline</a>
+                <a href="#time_line" onclick="scrollToTimeline(event)">Timeline</a>
                 <a href="src/sponsor.html">Sponsors</a>
                 <a href="src/faq.html">FAQs</a>
 
@@ -87,6 +87,22 @@
         $(function () {
             $("#Footer").load("src/footer.html");
         });
+    </script>
+    <script>
+        function scrollToTimeline(event) {
+            event.preventDefault();
+            const timelineElement = document.getElementById('time_line');
+            if (timelineElement) {
+                const navbarHeight = document.getElementById('navbar').offsetHeight;
+                const elementPosition = timelineElement.getBoundingClientRect().top + window.pageYOffset;
+                const offsetPosition = elementPosition - navbarHeight - 50; // 50px extra padding
+                
+                window.scrollTo({
+                    top: offsetPosition,
+                    behavior: 'smooth'
+                });
+            }
+        }
     </script>
     <script src="https://unpkg.com/scrollreveal@3.3.2/dist/scrollreveal.min.js"></script>
 

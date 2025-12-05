@@ -75,10 +75,24 @@
   /* // TEN DAYS OF CODE */
   color: white;
   font-size: 2em;
-  
-  font-weight: 600;
+  font-weight: 700;
   line-height: 69.3px;
   word-wrap: break-word;
+  text-shadow: 0 0 20px rgba(0, 229, 255, 0.6),
+               0 0 40px rgba(0, 229, 255, 0.3);
+  animation: headingPulse 3s ease-in-out infinite;
+}
+
+@keyframes headingPulse {
+  0%, 100% {
+    text-shadow: 0 0 20px rgba(0, 229, 255, 0.6),
+                 0 0 40px rgba(0, 229, 255, 0.3);
+  }
+  50% {
+    text-shadow: 0 0 30px rgba(0, 229, 255, 0.8),
+                 0 0 50px rgba(0, 229, 255, 0.4),
+                 0 0 70px rgba(0, 229, 255, 0.2);
+  }
 }
 .landingSectionSubHeading {
   /* // Organised By GLUG,NIT Durgapur */
@@ -129,12 +143,25 @@
 }
 .Activities {
   font-size: 4rem;
-  font-weight: 600;
+  font-weight: 700;
   background: linear-gradient(90deg, #00e5ff, #4dabf7, #00ffff, #0077b6);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  filter: drop-shadow(0 0 10px rgba(0, 229, 255, 0.3));
+  filter: drop-shadow(0 0 15px rgba(0, 229, 255, 0.5))
+          drop-shadow(0 0 30px rgba(0, 229, 255, 0.3));
+  animation: activityGlow 2.5s ease-in-out infinite alternate;
+}
+
+@keyframes activityGlow {
+  from {
+    filter: drop-shadow(0 0 15px rgba(0, 229, 255, 0.5))
+            drop-shadow(0 0 30px rgba(0, 229, 255, 0.3));
+  }
+  to {
+    filter: drop-shadow(0 0 20px rgba(0, 229, 255, 0.7))
+            drop-shadow(0 0 40px rgba(0, 229, 255, 0.4));
+  }
 }
 
 .landingSectionRight {
@@ -240,12 +267,13 @@
 }
 .projecttitle{
   font-size: 4rem;
-  font-weight: 600;
+  font-weight: 700;
   background: linear-gradient(90deg, #00e5ff, #4dabf7, #00ffff, #0077b6);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  filter: drop-shadow(0 0 10px rgba(0, 229, 255, 0.3));
+  filter: drop-shadow(0 0 15px rgba(0, 229, 255, 0.5))
+          drop-shadow(0 0 30px rgba(0, 229, 255, 0.3));
 }
 .Projects {
   display: flex;
@@ -736,14 +764,15 @@ filter: drop-shadow(0 0 5px rgba(0, 229, 255, 0.3));
 }
 .timelinetitle{
   font-size: 4rem;
-  font-weight: 600;
+  font-weight: 700;
   /* background-image: url("../assets/Images/timeline.svg")  !important; */
   background-image: linear-gradient(90deg, #00e5ff, #4dabf7, #00b4d8, #0077b6, #00ffff, #4dabf7, #00e5ff, #00b4d8);
   /* background: linear-gradient(30deg, #f9d751, #ffad53, #f7875f, #e5686b, #cc5075, #ae3f7a, #8e3479, #6c2d72);  */
   background-clip: text;
 -webkit-background-clip: text;
 -webkit-text-fill-color: transparent;
-filter: drop-shadow(0 0 10px rgba(0, 229, 255, 0.3));
+filter: drop-shadow(0 0 15px rgba(0, 229, 255, 0.5))
+        drop-shadow(0 0 30px rgba(0, 229, 255, 0.3));
 }
 .timeline {
   margin: 4em auto;

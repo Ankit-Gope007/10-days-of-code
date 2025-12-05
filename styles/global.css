@@ -1,11 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
 
 * {
-  font-family: 'Lato', sans-serif !important; 
+  font-family: 'Inter', sans-serif !important; 
 }
 
 :root {
-  --ff: "Lato", sans-serif;
+  --ff: "Inter", sans-serif;
   --fc-primary: #e0f7ff; /* Cyan-tinted white for text */
   --fc-blue: #00e5ff; /* Bright cyan for accents */
   --fs-small: 1rem;
@@ -31,7 +31,7 @@
 	--container-color: hsl(210, 60%, 10%);
 	/*========== Font and typography ==========*/
 	/*.5rem = 8px | 1rem = 16px ...*/
-	--body-font: "Poppins", sans-serif;
+	--body-font: "Inter", sans-serif;
 	--h2-font-size: 1.25rem;
 	--normal-font-size: 0.938rem;
 }
@@ -88,12 +88,42 @@ html {
 }
 
 .background {
-  background: #020817; /* Dark blue-black background */
+  background: #020817;
   background-image: 
-    radial-gradient(at 40% 20%, rgba(0, 229, 255, 0.1) 0px, transparent 50%),
-    radial-gradient(at 80% 80%, rgba(77, 171, 247, 0.08) 0px, transparent 50%),
-    radial-gradient(at 0% 50%, rgba(0, 119, 182, 0.05) 0px, transparent 50%);
-  height: 100vh; /* Adjust to your needs */
+    /* Diagonal pattern */
+    repeating-linear-gradient(
+      45deg,
+      transparent,
+      transparent 80px,
+      rgba(0, 229, 255, 0.02) 80px,
+      rgba(0, 229, 255, 0.02) 160px
+    ),
+    repeating-linear-gradient(
+      -45deg,
+      transparent,
+      transparent 80px,
+      rgba(0, 180, 216, 0.02) 80px,
+      rgba(0, 180, 216, 0.02) 160px
+    ),
+    /* Ambient glow */
+    radial-gradient(ellipse at 30% 20%, rgba(0, 229, 255, 0.06) 0%, transparent 50%),
+    radial-gradient(ellipse at 70% 80%, rgba(77, 171, 247, 0.04) 0%, transparent 50%);
+  min-height: 100vh;
+  position: relative;
+}
+
+.background::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    radial-gradient(circle at 25% 30%, rgba(0, 229, 255, 0.04) 0%, transparent 30%),
+    radial-gradient(circle at 75% 70%, rgba(77, 171, 247, 0.04) 0%, transparent 30%);
+  pointer-events: none;
+  z-index: 0;
 }
 
 .time {
@@ -118,13 +148,46 @@ html {
   backdrop-filter: blur(27px);
   background: rgba(10, 37, 64, 0.6);
   box-shadow: 0 1px 2px 0 rgba(0, 229, 255, 0.2),
-              0 0 20px rgba(0, 229, 255, 0.1);
+              0 0 20px rgba(0, 229, 255, 0.1),
+              0 0 40px rgba(0, 229, 255, 0.05);
+  animation: navGlow 3s ease-in-out infinite alternate;
+}
+
+@keyframes navGlow {
+  from {
+    box-shadow: 0 1px 2px 0 rgba(0, 229, 255, 0.2),
+                0 0 20px rgba(0, 229, 255, 0.1),
+                0 0 40px rgba(0, 229, 255, 0.05);
+  }
+  to {
+    box-shadow: 0 1px 2px 0 rgba(0, 229, 255, 0.3),
+                0 0 25px rgba(0, 229, 255, 0.15),
+                0 0 50px rgba(0, 229, 255, 0.08);
+  }
 }
 
 .tdoctitle {
   font-size: 30px;
   font-style: normal;
   font-weight: 600;
+  color: #00e5ff;
+  text-shadow: 0 0 10px rgba(0, 229, 255, 0.8),
+               0 0 20px rgba(0, 229, 255, 0.5),
+               0 0 30px rgba(0, 229, 255, 0.3);
+  animation: titleGlow 2s ease-in-out infinite alternate;
+}
+
+@keyframes titleGlow {
+  from {
+    text-shadow: 0 0 10px rgba(0, 229, 255, 0.8),
+                 0 0 20px rgba(0, 229, 255, 0.5),
+                 0 0 30px rgba(0, 229, 255, 0.3);
+  }
+  to {
+    text-shadow: 0 0 15px rgba(0, 229, 255, 1),
+                 0 0 25px rgba(0, 229, 255, 0.6),
+                 0 0 40px rgba(0, 229, 255, 0.4);
+  }
 }
 
 .logo {
