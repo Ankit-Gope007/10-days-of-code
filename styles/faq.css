@@ -27,12 +27,12 @@ html {
 
 .question,
 .answer {
-  background: linear-gradient(120deg, #9e3a3a, #ac4842, #ba574a, #c86552, #d6745a, #e48363, #f1926c, #ffa175);
-  border: 1px solid rgb(13, 17, 27);
+  border: 1px solid rgba(0, 229, 255, 0.3);
   border-radius: 0;
   padding: 20px;
   margin-bottom: 20px;
   color: white;
+  box-shadow: 0 0 15px rgba(0, 229, 255, 0.2);
 }
 
 .q-text,
@@ -50,13 +50,13 @@ html {
   text-align: center;
   font-weight: 600;
   /* background-image: url("../assets/Images/timeline.svg") !important; */
-  background: linear-gradient(120deg, #9e3a3a, #af5439, #bc703a, #c48c3f, #c9a849, #cac55a, #c7e274, #c0ff94);
+  background: linear-gradient(120deg, #00e5ff, #4dabf7, #00b4d8, #0077b6, #00ffff, #4dabf7, #00e5ff, #00b4d8);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-repeat: no-repeat;
   background-size: cover;
-
+  filter: drop-shadow(0 0 10px rgba(0, 229, 255, 0.3));
 }
 
 
@@ -68,22 +68,24 @@ html {
 
 
 .question {
-  background-color: #00111a;
+  background-color: rgba(10, 37, 64, 0.4);
   height: auto;
   display: flex;
   border-left: solid 5px var(--fc-blue);
   margin-bottom: 0 !important;
   padding-bottom: 0 !important;
+  box-shadow: 0 0 15px rgba(0, 229, 255, 0.3);
 }
 
 .answer {
-  background-color: #001f30ac;
+  background-color: rgba(10, 37, 64, 0.3);
   color: #fff;
   height: auto;
   display: flex;
-  border-left: solid 5px var(--card-blue-color);
+  border-left: solid 5px #00b4d8;
   margin-top: 0 !important;
   padding-top: 0 !important;
+  box-shadow: 0 0 15px rgba(0, 180, 216, 0.3);
 }
 
 .q-span {
@@ -99,7 +101,8 @@ html {
 
 .a-span {
   font-size: 5vh;
-  color: var(--card-blue-color);
+  color: #00e5ff;
+  text-shadow: 0 0 10px rgba(0, 229, 255, 0.5);
 }
 
 .a-text {
@@ -160,11 +163,12 @@ html {
     width: 100%;
     height: auto;
     border-style: none;
-    background: var(--card-blue-color);
+    background: #00b4d8;
     color: #fffaf0;
     font-size: 20px;
     cursor: pointer;
     border-left: solid 5px var(--fc-blue);
+    box-shadow: 0 0 15px rgba(0, 229, 255, 0.3);
   }
 
   #grow0,
@@ -174,9 +178,9 @@ html {
   #grow4,
   #grow5,
   #grow6 {
-    background-color: var(--primary-yellow-color);
-    border-left: solid 5px var(--card-blue-color);
-    color: #a8a7a7;
+    background-color: rgba(10, 37, 64, 0.8);
+    border-left: solid 5px #00b4d8;
+    color: #e0f7ff;
     font-weight: bold;
     font-size: 2.5vh;
     -moz-transition: height 0.5s;
@@ -186,6 +190,7 @@ html {
     transition: height 0.5s;
     height: 0;
     overflow-y: scroll;
+    box-shadow: 0 0 15px rgba(0, 229, 255, 0.2);
     /* overflow: hidden; */
   }
 }

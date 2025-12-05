@@ -6,25 +6,29 @@
 
 :root {
   --ff: "Lato", sans-serif;
-  --fc-primary: #f2dcdc; /* Light variation of the new color */
-  --fc-blue: #ffffff; /* Keeps text contrast with darker colors */
+  --fc-primary: #e0f7ff; /* Cyan-tinted white for text */
+  --fc-blue: #00e5ff; /* Bright cyan for accents */
   --fs-small: 1rem;
   --fs-large: 3.9rem;
-  --bg: #9e3a3a;
-  --bg-dark: #220c0c;
+  --bg: #0a2540; /* Deep navy blue */
+  --bg-dark: #020817; /* Very dark blue-black */
   --bg-grad: linear-gradient(
     90deg,
-    #9e3a3a 0%, /* Base red tone */
-    #f45b5b 100% /* Slightly lighter red for gradient effect */
+    #0a2540 0%, /* Deep navy */
+    #1e4976 50%, /* Medium blue */
+    #00b4d8 100% /* Bright cyan */
   );
-
+  --neon-blue: #00e5ff;
+  --neon-cyan: #00ffff;
+  --electric-blue: #4dabf7;
+  --dark-cyan: #0077b6;
   
 	/*========== Colors for projects==========*/
 	/*Color mode HSL(hue, saturation, lightness)*/
 	--white-color: #fff;
 	--black-color: hsl(210, 12%, 15%);
-	--body-color: hsl(210, 16%, 12%);
-	--container-color: hsl(210, 24%, 8%);
+	--body-color: hsl(210, 70%, 8%);
+	--container-color: hsl(210, 60%, 10%);
 	/*========== Font and typography ==========*/
 	/*.5rem = 8px | 1rem = 16px ...*/
 	--body-font: "Poppins", sans-serif;
@@ -55,7 +59,7 @@
 }
 
 .grad-bg-text:hover {
-  filter: brightness(150%) drop-shadow(5px 5px 10px #f45b5b); /* Matching the lighter gradient tone */
+  filter: brightness(150%) drop-shadow(5px 5px 10px #00e5ff);
 }
 
 a {
@@ -84,7 +88,11 @@ html {
 }
 
 .background {
-  background: #220c0c; /* Darker shade to complement the new scheme */
+  background: #020817; /* Dark blue-black background */
+  background-image: 
+    radial-gradient(at 40% 20%, rgba(0, 229, 255, 0.1) 0px, transparent 50%),
+    radial-gradient(at 80% 80%, rgba(77, 171, 247, 0.08) 0px, transparent 50%),
+    radial-gradient(at 0% 50%, rgba(0, 119, 182, 0.05) 0px, transparent 50%);
   height: 100vh; /* Adjust to your needs */
 }
 
@@ -106,10 +114,11 @@ html {
   width: 90%;
   border-radius: 1.2em;
   z-index: 30000;
-  border: 1px solid rgba(255, 255, 255, 0.123);
+  border: 1px solid rgba(0, 229, 255, 0.3);
   backdrop-filter: blur(27px);
-  background: url("../assets/Images/navchange.png") rgba(158, 58, 58, 0.045) 10% / cover no-repeat;
-  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.298);
+  background: rgba(10, 37, 64, 0.6);
+  box-shadow: 0 1px 2px 0 rgba(0, 229, 255, 0.2),
+              0 0 20px rgba(0, 229, 255, 0.1);
 }
 
 .tdoctitle {
@@ -159,10 +168,10 @@ html {
   color: var(--text-color);
   text-align: center;
   padding: 0.5em 0.5em;
-  color: #f2dcdc; /* New default text color */
+  color: #e0f7ff; /* Cyan-tinted white */
   position: relative;
   text-decoration: none;
-  transition: color 0.3s ease, transform 0.3s ease;
+  transition: color 0.3s ease, transform 0.3s ease, text-shadow 0.3s ease;
 }
 
 /* Add the underline effect */
@@ -173,6 +182,7 @@ html {
   bottom: 0;
   left: 0;
   background-color: var(--fc-blue);
+  box-shadow: 0 0 10px var(--fc-blue);
   transform: scaleY(0);
   transform-origin: top left;
   transition: transform 0.3s ease;
@@ -181,6 +191,7 @@ html {
 /* Define the hover effect */
 .title a:hover {
   color: var(--fc-blue); /* Hover text color */
+  text-shadow: 0 0 10px rgba(0, 229, 255, 0.5);
 }
 
 /* Adjust the underline width on hover */
