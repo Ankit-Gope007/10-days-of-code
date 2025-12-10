@@ -27,12 +27,12 @@ html {
 
 .question,
 .answer {
-  border: 1px solid rgba(255, 0, 255, 0.3);
+  border: 1px solid rgba(255, 20, 147, 0.3);
   border-radius: 0;
   padding: 20px;
   margin-bottom: 20px;
   color: white;
-  box-shadow: 0 0 15px rgba(255, 0, 255, 0.2);
+  box-shadow: 0 0 15px rgba(255, 20, 147, 0.2);
 }
 
 .q-text,
@@ -50,14 +50,14 @@ html {
   text-align: center;
   font-weight: 700;
   /* background-image: url("../assets/Images/timeline.svg") !important; */
-  background: linear-gradient(120deg, #ff00ff, #d946ef, #ba55d3, #8b008b, #ff69ff, #d946ef, #ff00ff, #ba55d3);
+  background: linear-gradient(120deg, #ff1493, #ff69b4, #ff1493, #c71585, #ff66cc, #ff69b4, #ff1493, #ff1493);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-repeat: no-repeat;
   background-size: cover;
-  filter: drop-shadow(0 0 15px rgba(255, 0, 255, 0.5))
-          drop-shadow(0 0 30px rgba(255, 0, 255, 0.3));
+  filter: drop-shadow(0 0 15px rgba(255, 20, 147, 0.5))
+          drop-shadow(0 0 30px rgba(255, 20, 147, 0.3));
 }
 
 
@@ -69,26 +69,26 @@ html {
 
 
 .question {
-  background-color: rgba(45, 10, 61, 0.4);
+  background-color: rgba(45, 26, 61, 0.4);
   height: auto;
   display: flex;
-  border-left: solid 5px #ffd700;
+  border-left: solid 5px #ff1493;
   margin-bottom: 0 !important;
   padding-bottom: 0 !important;
-  box-shadow: 0 0 15px rgba(255, 215, 0, 0.3),
-              0 0 30px rgba(255, 0, 255, 0.2);
+  box-shadow: 0 0 15px rgba(255, 20, 147, 0.3),
+              0 0 30px rgba(255, 20, 147, 0.2);
 }
 
 .answer {
-  background-color: rgba(45, 10, 61, 0.3);
+  background-color: rgba(45, 26, 61, 0.3);
   color: #fff;
   height: auto;
   display: flex;
-  border-left: solid 5px #ba55d3;
+  border-left: solid 5px #ff1493;
   margin-bottom: 20px !important;
   padding-bottom: 20px !important;
-  box-shadow: 0 0 15px rgba(186, 85, 211, 0.3),
-              0 0 25px rgba(255, 215, 0, 0.1);
+  box-shadow: 0 0 15px rgba(255, 20, 147, 0.3),
+              0 0 25px rgba(255, 20, 147, 0.1);
 }
 
 .q-span {
@@ -104,8 +104,8 @@ html {
 
 .a-span {
   font-size: 5vh;
-  color: #ff00ff;
-  text-shadow: 0 0 10px rgba(255, 0, 255, 0.5);
+  color: #ff1493;
+  text-shadow: 0 0 10px rgba(255, 20, 147, 0.5);
 }
 
 .a-text {
@@ -166,12 +166,12 @@ html {
     width: 100%;
     height: auto;
     border-style: none;
-    background: #ba55d3;
+    background: #ff1493;
     color: #fffaf0;
     font-size: 20px;
     cursor: pointer;
     border-left: solid 5px var(--fc-blue);
-    box-shadow: 0 0 15px rgba(255, 0, 255, 0.3);
+    box-shadow: 0 0 15px rgba(255, 20, 147, 0.3);
   }
 
   #grow0,
@@ -181,8 +181,8 @@ html {
   #grow4,
   #grow5,
   #grow6 {
-    background-color: rgba(45, 10, 61, 0.8);
-    border-left: solid 5px #ba55d3;
+    background-color: rgba(45, 26, 61, 0.8);
+    border-left: solid 5px #ff1493;
     color: #e0f7ff;
     font-weight: bold;
     font-size: 2.5vh;
@@ -193,7 +193,7 @@ html {
     transition: height 0.5s;
     height: 0;
     overflow-y: scroll;
-    box-shadow: 0 0 15px rgba(255, 0, 255, 0.2);
+    box-shadow: 0 0 15px rgba(255, 20, 147, 0.2);
     /* overflow: hidden; */
   }
 }

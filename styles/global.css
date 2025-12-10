@@ -6,25 +6,25 @@
 
 :root {
   --ff: "Inter", sans-serif;
-  --fc-primary: #e0f7ff; /* Cyan-tinted white for text */
-  --fc-blue: #ff00ff; /* Bright magenta for accents */
-  --fc-gold: #ffd700; /* Gold accent */
-  --fc-yellow: #ffeb3b; /* Bright yellow */
+  --fc-primary: #ffe0f0; /* Pink-tinted white for text */
+  --fc-blue: #ff1493; /* Deep pink for accents */
+  --fc-gold: #ff1493; /* Deep pink accent */
+  --fc-yellow: #ff66cc; /* Light pink */
   --fs-small: 1rem;
   --fs-large: 3.9rem;
-  --bg: #2d0a3d; /* Deep purple */
-  --bg-dark: #1a0a2e; /* Very dark purple-black */
+  --bg: #2d1a3d; /* Dark purple-black */
+  --bg-dark: #1a0a1e; /* Very dark purple */
   --bg-grad: linear-gradient(
     90deg,
-    #2d0a3d 0%, /* Deep purple */
-    #1e4976 50%, /* Medium purple */
-    #ba55d3 100% /* Light purple */
+    #1a0a1e 0%, /* Very dark purple */
+    #2d1a3d 50%, /* Dark purple-black */
+    #ff1493 100% /* Deep pink */
   );
-  --neon-purple: #ff00ff;
-  --neon-pink: #ff69ff;
-  --electric-purple: #d946ef;
-  --dark-purple: #8b008b;
-  --gold-glow: #ffaa00;
+  --neon-pink: #ff1493;
+  --neon-light-pink: #ff66cc;
+  --hot-pink: #ff69b4;
+  --medium-violet-red: #c71585;
+  --deep-pink: #ff1493;
   
 	/*========== Colors for projects==========*/
 	/*Color mode HSL(hue, saturation, lightness)*/
@@ -62,7 +62,7 @@
 }
 
 .grad-bg-text:hover {
-  filter: brightness(150%) drop-shadow(5px 5px 10px #ff00ff);
+  filter: brightness(150%) drop-shadow(5px 5px 10px #ff1493);
 }
 
 a {
@@ -91,26 +91,26 @@ html {
 }
 
 .background {
-  background: #1a0a2e;
+  background: #1a0a1e;
   background-image: 
     /* Diagonal pattern */
     repeating-linear-gradient(
       45deg,
       transparent,
       transparent 80px,
-      rgba(255, 0, 255, 0.02) 80px,
-      rgba(255, 0, 255, 0.02) 160px
+      rgba(255, 20, 147, 0.02) 80px,
+      rgba(255, 20, 147, 0.02) 160px
     ),
     repeating-linear-gradient(
       -45deg,
       transparent,
       transparent 80px,
-      rgba(186, 85, 211, 0.02) 80px,
-      rgba(186, 85, 211, 0.02) 160px
+      rgba(255, 20, 147, 0.02) 80px,
+      rgba(255, 20, 147, 0.02) 160px
     ),
     /* Ambient glow */
-    radial-gradient(ellipse at 30% 20%, rgba(255, 0, 255, 0.06) 0%, transparent 50%),
-    radial-gradient(ellipse at 70% 80%, rgba(186, 85, 211, 0.04) 0%, transparent 50%);
+    radial-gradient(ellipse at 30% 20%, rgba(255, 20, 147, 0.06) 0%, transparent 50%),
+    radial-gradient(ellipse at 70% 80%, rgba(255, 20, 147, 0.04) 0%, transparent 50%);
   min-height: 100vh;
   position: relative;
 }
@@ -123,8 +123,8 @@ html {
   width: 100%;
   height: 100%;
   background: 
-    radial-gradient(circle at 25% 30%, rgba(255, 0, 255, 0.04) 0%, transparent 30%),
-    radial-gradient(circle at 75% 70%, rgba(186, 85, 211, 0.04) 0%, transparent 30%);
+    radial-gradient(circle at 25% 30%, rgba(255, 20, 147, 0.04) 0%, transparent 30%),
+    radial-gradient(circle at 75% 70%, rgba(255, 20, 147, 0.04) 0%, transparent 30%);
   pointer-events: none;
   z-index: 0;
 }
@@ -147,46 +147,52 @@ html {
   width: 90%;
   border-radius: 1.2em;
   z-index: 30000;
-  border: 1px solid rgba(255, 215, 0, 0.3);
+  border: 1px solid rgba(255, 20, 147, 0.3);
   backdrop-filter: blur(27px);
-  background: rgba(45, 10, 61, 0.6);
-  box-shadow: 0 1px 2px 0 rgba(255, 215, 0, 0.2),
-              0 0 20px rgba(255, 215, 0, 0.1),
-              0 0 40px rgba(255, 215, 0, 0.05);
+  background: rgba(45, 26, 61, 0.6);
+  box-shadow: 0 1px 2px 0 rgba(255, 20, 147, 0.2),
+              0 0 20px rgba(255, 20, 147, 0.1),
+              0 0 40px rgba(255, 20, 147, 0.05);
   animation: navGlow 3s ease-in-out infinite alternate;
 }
 
 @keyframes navGlow {
   from {
-    box-shadow: 0 1px 2px 0 rgba(255, 215, 0, 0.2),
-                0 0 20px rgba(255, 215, 0, 0.1),
-                0 0 40px rgba(255, 215, 0, 0.05);
+    box-shadow: 0 1px 2px 0 rgba(255, 20, 147, 0.2),
+                0 0 20px rgba(255, 20, 147, 0.1),
+                0 0 40px rgba(255, 20, 147, 0.05);
   }
   to {
-    box-shadow: 0 1px 2px 0 rgba(255, 215, 0, 0.3),
-                0 0 25px rgba(255, 215, 0, 0.15),
-                0 0 50px rgba(255, 215, 0, 0.08);
+    box-shadow: 0 1px 2px 0 rgba(255, 20, 147, 0.3),
+                0 0 25px rgba(255, 20, 147, 0.15),
+                0 0 50px rgba(255, 20, 147, 0.08);
   }
 }
 
 .tdoctitle {
   font-size: 30px;
   font-style: normal;
-  font-weight: 600;
-  color: #ff00ff;
-  text-shadow: 0 0 5px rgba(255, 0, 255, 0.4),
-               0 0 10px rgba(255, 0, 255, 0.2);
+  font-weight: 700;
+  color: #ff1493;
+  text-shadow: 0 0 10px rgba(255, 20, 147, 0.8),
+               0 0 20px rgba(255, 20, 147, 0.5),
+               0 0 30px rgba(255, 20, 147, 0.3),
+               0 0 40px rgba(255, 102, 204, 0.2);
   animation: titleGlow 2s ease-in-out infinite alternate;
 }
 
 @keyframes titleGlow {
   from {
-    text-shadow: 0 0 5px rgba(255, 0, 255, 0.4),
-                 0 0 10px rgba(255, 0, 255, 0.2);
+    text-shadow: 0 0 10px rgba(255, 20, 147, 0.8),
+                 0 0 20px rgba(255, 20, 147, 0.5),
+                 0 0 30px rgba(255, 20, 147, 0.3),
+                 0 0 40px rgba(255, 102, 204, 0.2);
   }
   to {
-    text-shadow: 0 0 8px rgba(255, 0, 255, 0.5),
-                 0 0 15px rgba(255, 0, 255, 0.3);
+    text-shadow: 0 0 15px rgba(255, 20, 147, 1),
+                 0 0 30px rgba(255, 20, 147, 0.6),
+                 0 0 45px rgba(255, 20, 147, 0.4),
+                 0 0 60px rgba(255, 102, 204, 0.3);
   }
 }
 
@@ -254,7 +260,7 @@ html {
 /* Define the hover effect */
 .title a:hover {
   color: var(--fc-blue); /* Hover text color */
-  text-shadow: 0 0 10px rgba(255, 0, 255, 0.5);
+  text-shadow: 0 0 10px rgba(255, 20, 147, 0.5);
 }
 
 /* Adjust the underline width on hover */
