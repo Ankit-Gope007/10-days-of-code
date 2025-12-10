@@ -27,14 +27,14 @@
   text-align: center;
   font-weight: 700;
   /* background-image: url(../assets/Images/timeline.svg) !important; */
-  background: linear-gradient(90deg, #00e5ff, #4dabf7, #00b4d8, #0077b6, #00ffff, #4dabf7, #00e5ff, #00b4d8);
+  background: linear-gradient(90deg, #ff00ff, #d946ef, #ba55d3, #8b008b, #ff69ff, #d946ef, #ff00ff, #ba55d3);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-repeat: no-repeat;
   background-size: cover;
-  filter: drop-shadow(0 0 15px rgba(0, 229, 255, 0.5))
-          drop-shadow(0 0 30px rgba(0, 229, 255, 0.3));
+  filter: drop-shadow(0 0 15px rgba(255, 0, 255, 0.5))
+          drop-shadow(0 0 30px rgba(255, 0, 255, 0.3));
 }
 
 

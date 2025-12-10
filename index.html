@@ -103,6 +103,26 @@
                 });
             }
         }
+
+        // Handle timeline scroll when coming from another page with hash
+        window.addEventListener('load', function() {
+            if (window.location.hash === '#time_line') {
+                // Wait for content to load
+                setTimeout(function() {
+                    const timelineElement = document.getElementById('time_line');
+                    if (timelineElement) {
+                        const navbarHeight = document.getElementById('navbar').offsetHeight;
+                        const elementPosition = timelineElement.getBoundingClientRect().top + window.pageYOffset;
+                        const offsetPosition = elementPosition - navbarHeight - 50;
+                        
+                        window.scrollTo({
+                            top: offsetPosition,
+                            behavior: 'smooth'
+                        });
+                    }
+                }, 500); // Wait 500ms for content to fully load
+            }
+        });
     </script>
     <script src="https://unpkg.com/scrollreveal@3.3.2/dist/scrollreveal.min.js"></script>
 
