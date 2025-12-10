@@ -72,10 +72,11 @@ html {
   background-color: rgba(45, 10, 61, 0.4);
   height: auto;
   display: flex;
-  border-left: solid 5px var(--fc-blue);
+  border-left: solid 5px #ffd700;
   margin-bottom: 0 !important;
   padding-bottom: 0 !important;
-  box-shadow: 0 0 15px rgba(255, 0, 255, 0.3);
+  box-shadow: 0 0 15px rgba(255, 215, 0, 0.3),
+              0 0 30px rgba(255, 0, 255, 0.2);
 }
 
 .answer {
@@ -84,9 +85,10 @@ html {
   height: auto;
   display: flex;
   border-left: solid 5px #ba55d3;
-  margin-top: 0 !important;
-  padding-top: 0 !important;
-  box-shadow: 0 0 15px rgba(186, 85, 211, 0.3);
+  margin-bottom: 20px !important;
+  padding-bottom: 20px !important;
+  box-shadow: 0 0 15px rgba(186, 85, 211, 0.3),
+              0 0 25px rgba(255, 215, 0, 0.1);
 }
 
 .q-span {

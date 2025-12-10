@@ -77,13 +77,15 @@
 		linear-gradient(
 				135deg,
 				#ff00ff 0%,
-				var(--container-color),
-				var(--container-color),
+				#ffd700 25%,
+				var(--container-color) 50%,
+				var(--container-color) 75%,
 				#ba55d3 100%
 			)
 			border-box;
 	border-radius: 1.25rem;
-  box-shadow: 0 0 15px rgba(255, 0, 255, 0.1);
+  box-shadow: 0 0 15px rgba(255, 215, 0, 0.15),
+              0 0 25px rgba(255, 0, 255, 0.1);
 }
 
 .card1::before {
