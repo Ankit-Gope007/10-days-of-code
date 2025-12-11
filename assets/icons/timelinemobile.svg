@@ -23,13 +23,14 @@
 <feBlend mode="normal" in2="shape" result="effect2_innerShadow_315_2"/>
 </filter>
 <linearGradient id="paint0_linear_315_2" x1="-21.7867" y1="63.8607" x2="32.1603" y2="-58.4548" gradientUnits="userSpaceOnUse">
-<stop offset="0.256363" stop-color="#ff1493"/>
-<stop offset="0.678918" stop-color="#ff66cc"/>
-<stop offset="1" stop-color="#ff69b4" stop-opacity="0.18"/>
+<stop offset="0" stop-color="#ff1493"/>
+<stop offset="0.5" stop-color="#9d4edd"/>
+<stop offset="1" stop-color="#ff66cc" stop-opacity="0.18"/>
 </linearGradient>
 <linearGradient id="paint1_linear_315_2" x1="11.5" y1="14" x2="11.5" y2="94" gradientUnits="userSpaceOnUse">
-<stop stop-color="#ff69b4"/>
-<stop offset="0.171875" stop-color="#ff1493"/>
+<stop stop-color="#ff1493"/>
+<stop offset="0.5" stop-color="#9d4edd"/>
+<stop offset="1" stop-color="#ff66cc"/>
 </linearGradient>
 </defs>
 </svg>

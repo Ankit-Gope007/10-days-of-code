@@ -8,7 +8,7 @@
 </g>
 <circle cx="56" cy="230" r="6.5" fill="black" stroke="white" stroke-width="3"/>
 <circle cx="56" cy="230" r="7.5" stroke="#ff1493"/>
-<path fill-rule="evenodd" clip-rule="evenodd" d="M0 0V452H4V0H0Z" fill="#ff69b4"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M0 0V452H4V0H0Z" fill="#9d4edd"/>
 <defs>
 <filter id="filter0_bf_238_14" x="3" y="177" width="105" height="105" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
 <feFlood flood-opacity="0" result="BackgroundImageFix"/>
@@ -26,10 +26,8 @@
 </filter>
 <linearGradient id="paint0_linear_238_14" x1="22.4826" y1="4.11821e-09" x2="21.0861" y2="451.55" gradientUnits="userSpaceOnUse">
 <stop stop-color="#ff1493"/>
-<stop offset="0.166567" stop-color="#ff69b4"/>
-<stop offset="0.328125" stop-color="#ff66cc"/>
-<stop offset="0.598958" stop-color="#c71585"/>
-<stop offset="0.9999" stop-color="#ff1493"/>
+<stop offset="0.5" stop-color="#9d4edd"/>
+<stop offset="1" stop-color="#ff66cc"/>
 </linearGradient>
 </defs>
 </svg>

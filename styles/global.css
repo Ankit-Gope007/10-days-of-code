@@ -16,14 +16,15 @@
   --bg-dark: #1a0a1e; /* Very dark purple */
   --bg-grad: linear-gradient(
     90deg,
-    #1a0a1e 0%, /* Very dark purple */
-    #2d1a3d 50%, /* Dark purple-black */
-    #ff1493 100% /* Deep pink */
+    #ff1493 0%, /* Deep pink */
+    #9d4edd 50%, /* Purple */
+    #ff66cc 100% /* Light pink */
   );
   --neon-pink: #ff1493;
   --neon-light-pink: #ff66cc;
-  --hot-pink: #ff69b4;
-  --medium-violet-red: #c71585;
+  --neon-purple: #9d4edd;
+  --electric-purple: #9d4edd;
+  --medium-violet-red: #ff66cc;
   --deep-pink: #ff1493;
   
 	/*========== Colors for projects==========*/

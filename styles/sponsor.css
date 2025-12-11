@@ -27,7 +27,7 @@
   text-align: center;
   font-weight: 700;
   /* background-image: url(../assets/Images/timeline.svg) !important; */
-  background: linear-gradient(90deg, #ff1493, #ff1493, #ff69b4, #ff1493, #c71585, #ff1493, #ff66cc, #ff69b4, #ff1493, #ff1493);
+  background: linear-gradient(90deg, #ff1493 0%, #9d4edd 50%, #ff66cc 100%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
