@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ten Days Of Code</title>
+  
+</head>
+
+<body>
+  <div class="footer">
+    <div class="footer-content">
+      <!-- About Section -->
+      <div class="footer-section footer-sec-about">
+        <div class="footer-title">TDOC</div>
+        <div class="footer-handles">
+          <div class="handle-items"><a href="https://discord.gg/pxKswYmK" target="_blank" rel="noopener noreferrer" title="GitHub"><img src="../assets/Images/discord.png" alt="GitHub"></a></div>
+          <div class="handle-items"><a href="https://github.com/lugnitdgp" target="_blank" rel="noopener noreferrer" title="GitHub"><img src="../assets/Images/github.png" alt="GitHub"></a></div>
+          <div class="handle-items"><a href="https://www.facebook.com/nitdgplug" target="_blank" rel="noopener noreferrer" title="Facebook"><img src="../assets/Images/facebook.png" alt="Facebook"></a></div>
+          <div class="handle-items"><a href="https://www.linkedin.com/company/lugnitdgp/?originalSubdomain=in" target="_blank" rel="noopener noreferrer" title="LinkedIn"><img src="../assets/Images/linkedin.png" alt="LinkedIn"></a></div>
+        </div>
+      </div>
+
+      <!-- Quick Links Section -->
+      <div class="footer-section footer-links">
+        <div class="footer-section-title">Quick Links</div>
+        <div class="footer-item"><a href="#home" onclick="window.location.href='index.html'">Home</a></div>
+        <div class="footer-item"><a href="src/project.html">Projects</a></div>
+        <div class="footer-item"><a href="#time_line" onclick="scrollToTimeline(event)">Timeline</a></div>
+        <div class="footer-item"><a href="src/sponsor.html">Sponsors</a></div>
+        <div class="footer-item"><a href="src/faq.html">FAQs</a></div>
+      </div>
+
+      <!-- Contact Section -->
+      <div class="footer-section footer-contact-section">
+        <div class="footer-section-title">Contact Us</div>
+        <div class="footer-contact-item">
+          <div class="contact-name">Devansh</div>
+          <div class="contact-detail">+91 97211 61889</div>
+        </div>
+        <div class="footer-contact-item">
+          <div class="contact-name">Sravan</div>
+          <div class="contact-detail">+91 89776 06575</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Copyright Section -->
+    <div class="footer-bottom">
+      <div class="copyright">© 2025 All Rights Reserved By <a href="https://nitdgplug.org/" target="_blank" rel="noopener noreferrer">GLUG, NIT Durgapur</a></div>
+    </div>
+  </div>
+
+  <script>
+    // Smart navigation handler for footer links
+    function getBasePath() {
+      const currentPath = window.location.pathname;
+      // Check if we're in a src/ subdirectory
+      if (currentPath.includes('/src/')) {
+        return '../'; // Go up one level
+      }
+      return ''; // We're at root
+    }
+
+    // Function to fix paths
+    function fixFooterPaths() {
+      const basePath = getBasePath();
+      
+      // Fix image paths when footer is loaded on index.html (root)
+      if (basePath === '') {
+        const footerImages = document.querySelectorAll('.footer-handles img');
+        footerImages.forEach(img => {
+          const src = img.getAttribute('src');
+          if (src && src.startsWith('../assets/')) {
+            img.setAttribute('src', src.replace('../', ''));
+          }
+        });
+      }
+      
+      const footerLinks = document.querySelectorAll('.footer-links .footer-item a');
+      
+      footerLinks.forEach(link => {
+        const href = link.getAttribute('href');
+        
+        // Skip timeline link and external links
+        if (href && (href.includes('#time_line') || href.startsWith('http'))) {
+          return;
+        }
+        
+        // Update relative paths
+        if (href && href.startsWith('src/')) {
+          if (basePath === '../') {
+            // We're in src/, so remove 'src/' prefix
+            link.setAttribute('href', href.replace('src/', ''));
+          }
+          // Otherwise leave it as is (we're at root)
+        } else if (href === '#home' || href === 'index.html') {
+          // Home link
+          link.setAttribute('href', basePath + 'index.html');
+          link.removeAttribute('onclick');
+        }
+      });
+    }
+
+    // Run immediately and also on DOMContentLoaded
+    fixFooterPaths();
+    
+    // Also run when DOM is ready (for cases where footer loads after DOMContentLoaded)
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', fixFooterPaths);
+    }
+
+    // Timeline scroll function (works when on home page)
+    function scrollToTimeline(event) {
+      event.preventDefault();
+      const currentPath = window.location.pathname;
+      
+      // If we're not on the home page, navigate to it first
+      if (!currentPath.endsWith('index.html') && !currentPath.endsWith('/')) {
+        window.location.href = getBasePath() + 'index.html#time_line';
+        return;
+      }
+      
+      // We're on home page, scroll to timeline
+      const timelineElement = document.getElementById('time_line');
+      if (timelineElement) {
+        const navbarHeight = document.getElementById('navbar')?.offsetHeight || 0;
+        const elementPosition = timelineElement.getBoundingClientRect().top + window.pageYOffset;
+        const offsetPosition = elementPosition - navbarHeight - 50;
+        
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: 'smooth'
+        });
+      }
+    }
+  </script>
+</body>
+</html>

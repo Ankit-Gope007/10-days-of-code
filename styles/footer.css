@@ -1,0 +1,355 @@
+* {
+  color: white;
+}
+
+.footer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 2em 2em 1em;
+  font-size: 16px;
+  line-height: 1.6;
+  border-top: none;
+  background: #1a0a1e;
+  box-shadow: none;
+}
+
+.footer-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 0.3em;
+  background: linear-gradient(90deg, #ff1493 0%, #9d4edd 50%, #ff66cc 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 0 10px rgba(255, 20, 147, 0.15));
+}
+
+.footer-description {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.95rem;
+  margin-bottom: 1em;
+  line-height: 1.5;
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2em;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  align-items: start;
+}
+
+.footer-section {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6em;
+  text-align: left;
+}
+
+.footer-sec-about {
+  gap: 0.8em;
+}
+
+.footer-section-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.5em;
+  color: #ff66cc;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.footer-item {
+  margin: 0.05em 0;
+  transition: all 0.3s ease;
+}
+
+.footer-item a {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.8);
+  transition: all 0.3s ease;
+  display: inline-block;
+  position: relative;
+}
+
+.footer-item a::before {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -2px;
+  left: 0;
+  background: linear-gradient(90deg, #ff1493, #ff66cc);
+  transition: width 0.3s ease;
+}
+
+.footer-item a:hover {
+  color: #ff66cc;
+  transform: translateX(5px);
+}
+
+.footer-item a:hover::before {
+  width: 100%;
+}
+
+/* GLUG Website Button */
+.footer-glug-link {
+  margin: 0.5em 0;
+}
+
+.glug-website-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  background: rgba(255, 20, 147, 0.1);
+  border: 1px solid rgba(255, 20, 147, 0.3);
+  border-radius: 8px;
+  color: rgba(255, 255, 255, 0.9);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  box-shadow: none;
+}
+
+.glug-website-btn:hover {
+  background: rgba(255, 20, 147, 0.2);
+  border-color: rgba(255, 20, 147, 0.5);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(255, 20, 147, 0.15);
+  color: #ff66cc;
+}
+
+.glug-website-btn svg {
+  transition: transform 0.3s ease;
+}
+
+.glug-website-btn:hover svg {
+  transform: translateX(4px);
+}
+
+/* Social Handles */
+.footer-handles {
+  display: flex;
+  gap: 0.8em;
+  margin-top: 0.3em;
+}
+
+.handle-items {
+  transition: all 0.3s ease;
+}
+
+.handle-items:hover {
+  transform: translateY(-3px);
+}
+
+.handle-items img {
+  width: 2em;
+  height: 2em;
+  transition: all 0.3s ease;
+  filter: brightness(0.9);
+}
+
+.handle-items:hover img {
+  filter: brightness(1.2) drop-shadow(0 0 10px rgba(255, 20, 147, 0.5));
+}
+
+/* Contact Section */
+.footer-contact-section {
+  gap: 0.6em;
+}
+
+.footer-contact-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2em;
+  padding: 0.4em 0;
+  background: transparent;
+  border-left: none;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.footer-contact-item:hover {
+  background: transparent;
+  transform: none;
+}
+
+.contact-name {
+  font-weight: 600;
+  color: #ff66cc;
+  font-size: 0.95rem;
+}
+
+.contact-detail {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.85rem;
+  font-family: monospace;
+}
+
+/* Footer Bottom */
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 1em;
+  text-align: center;
+  margin-top: 0.5em;
+}
+
+.copyright {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.copyright a {
+  color: #ff66cc;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.copyright a:hover {
+  color: #ff1493;
+  text-shadow: 0 0 10px rgba(255, 20, 147, 0.5);
+}
+
+.footer p {
+  margin-bottom: 5px;
+}
+.Logos img {
+  height: 35px;
+  width: auto;
+  margin: 0 5px;
+}
+
+/* Responsive Design */
+@media only screen and (max-width: 1024px) {
+  .footer-content {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 2.5em;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .footer {
+    font-size: 15px;
+    padding: 2.5em 1.5em 1em;
+    gap: 30px;
+  }
+
+  .footer-title {
+    font-size: 1.75rem;
+  }
+
+  .footer-content {
+    grid-template-columns: 1fr;
+    gap: 2em;
+    text-align: center;
+  }
+
+  .footer-section {
+    text-align: center;
+    align-items: center;
+  }
+
+  .footer-item a::before {
+    display: none;
+  }
+
+  .footer-handles {
+    justify-content: center;
+  }
+
+  .footer-contact-item {
+    align-items: center;
+    text-align: center;
+    border-left: none;
+    border-top: none;
+  }
+
+  .glug-website-btn {
+    font-size: 0.85rem;
+    padding: 8px 16px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .footer {
+    padding: 2em 1em 1em;
+    gap: 25px;
+  }
+
+  .footer-title {
+    font-size: 1.5rem;
+  }
+
+  .footer-section-title {
+    font-size: 1rem;
+  }
+
+  .footer-description {
+    font-size: 0.85rem;
+  }
+
+  .handle-items img {
+    width: 1.5em;
+    height: 1.5em;
+  }
+
+  .footer-content {
+    gap: 1.5em;
+  }
+
+  .glug-website-btn {
+    font-size: 0.8rem;
+    padding: 8px 14px;
+  }
+
+  .glug-website-btn span {
+    font-size: 0.85rem;
+  }
+
+  .copyright {
+    font-size: 0.8rem;
+  }
+
+  .contact-name {
+    font-size: 0.95rem;
+  }
+
+  .contact-detail {
+    font-size: 0.85rem;
+  }
+
+  .footer-item a:hover {
+    transform: translateX(2px);
+  }
+}
+
+@media only screen and (max-width: 350px) {
+  .footer {
+    padding: 1.5em 0.8em 0.8em;
+  }
+
+  .footer-title {
+    font-size: 1.3rem;
+  }
+
+  .footer-section-title {
+    font-size: 0.95rem;
+  }
+
+  .glug-website-btn {
+    font-size: 0.75rem;
+    padding: 6px 12px;
+  }
+
+  .handle-items img {
+    width: 1.3em;
+    height: 1.3em;
+  }
+}
